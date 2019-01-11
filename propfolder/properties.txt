@@ -1,0 +1,4 @@
+APP_GIT_URL=https://github.com/MeghanaNettem2/devpractice.git
+APP_BUILD=mvn clean install
+APP_SONAR1=mvn sonar:sonar -Dsonar.host.url=
+APP_SONAR2=http://my40867dns.eastus2.cloudapp.azure.com

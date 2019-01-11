@@ -1,0 +1,32 @@
+
+node 
+{
+ checkout scm;
+  def mvnHome
+  
+   def url =readProperties  file: 'propfolder/properties.txt'
+   stage('checkout') 
+   { 
+   
+   echo "${url}"
+   def Var1= url.APP_GIT_URL
+   echo "Var1=${Var1}"
+   git "${Var1}"
+   mvnHome = tool 'MAVEN_HOME'
+   }
+   stage('Build')
+   {
+   def Var2= url.APP_BUILD
+   echo "${Var2}"
+     sh "${Var2}"
+   }
+   stage('SonarQube analysis') 
+    { 
+    def Var3= url.APP_SONAR1
+    def Var4=url.APP_SONAR2
+    Sonarurl=Var3+Var4
+    echo "${Sonarurl}"
+    sh "${Sonarurl}"
+     }
+ 
+}

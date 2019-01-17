@@ -1,4 +1,4 @@
 APP_GIT_URL=https://github.com/Jyothinayak123/apprepo.git
 APP_BUILD=mvn clean install
 APP_SONAR1=mvn sonar:sonar -Dsonar.host.url=
-APP_SONAR2=http://my43785dns.eastus2.cloudapp.azure.com:9000
+APP_SONAR2=http://52.14.107.23:9000/

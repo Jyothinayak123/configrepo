@@ -27,12 +27,13 @@ node
     echo "${Sonarurl}"
      sh "${Sonarurl}"
       }
+ 
 stage ('deploying artifact'){
 def server =Artifactory.server 'artifact'
 def uploadSpec="""{
 "files":[
 {
- "pattern":"target/*.war",
+ "pattern":"**/*.war",
  "target":"repo/"
 }
 ]

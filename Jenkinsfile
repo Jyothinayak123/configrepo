@@ -28,7 +28,7 @@ node
      sh "${Sonarurl}"
       }
 stage ('deploying artifact'){
-def server =Artifactory.server 'ArtifactoryID'
+def server =Artifactory.server 'artifact'
 def uploadSpec="""{
 "files":[
 {

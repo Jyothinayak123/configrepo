@@ -19,14 +19,14 @@ node
    echo "${Var2}"
      sh "${Var2}"
    }
-   stage('SonarQube analysis') 
+   //stage('SonarQube analysis') 
     { 
-    def Var3= url.APP_SONAR1
-    def Var4=url.APP_SONAR2
-    Sonarurl=Var3+Var4
-    echo "${Sonarurl}"
-    sh "${Sonarurl}"
-     }
+   //  def Var3= url.APP_SONAR1
+  //   def Var4=url.APP_SONAR2
+  //   Sonarurl=Var3+Var4
+   //  echo "${Sonarurl}"
+   //  sh "${Sonarurl}"
+    //  }
 stage ('deploying artifact'){
 def server =Artifactory.server 'ArtifactoryID'
 def uploadSpec="""{

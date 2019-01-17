@@ -40,4 +40,9 @@ def uploadSpec="""{
 }"""
 server.upload(uploadSpec)
 }
+ 
+ sshagent(['']) {
+    sh 'ssh -o StrictHostKeyChecking=no **/*.war minduseradmin@my43785dns.EastUS2.cloudapp.azure.com:/opt/tomcat/webapps 
+}
+
 }

@@ -27,5 +27,16 @@ node
     echo "${Sonarurl}"
     sh "${Sonarurl}"
      }
- 
+stage ('deploying artifact'){
+def server =Artifactory.server 'ArtifactoryID'
+def uploadSpec="""{
+"files":[
+{
+ "pattern":"target/*.war",
+ "target":"repo/"
+}
+]
+}"""
+server.upload(uploadSpec)
+}
 }

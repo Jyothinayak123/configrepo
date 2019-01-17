@@ -42,7 +42,7 @@ server.upload(uploadSpec)
 }
  stage ('deloy to tomcat'){
  sshagent(['']) {
-    sh 'ssh -o StrictHostKeyChecking=no **/*.war minduseradmin@my43785dns.EastUS2.cloudapp.azure.com:/opt/tomcat/webapps 
+    sh 'ssh -o StrictHostKeyChecking=no **/*.war minduseradmin@my43785dns.EastUS2.cloudapp.azure.com:/opt/tomcat/webapps'
 }
  }
 

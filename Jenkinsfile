@@ -1,9 +1,9 @@
 node 
 {
  checkout scm;
-  def mvnHome
   
-   def url =readProperties  file: 'propfolder/properties.txt'
+ 
+   def url = readProperties  file: 'propfolder/properties.txt'
    stage('checkout') 
    { 
    
@@ -11,7 +11,7 @@ node
    def Var1= url.APP_GIT_URL
    echo "Var1=${Var1}"
    git "${Var1}"
-   mvnHome = tool 'MAVEN_HOME'
+  
    }
    stage('Build')
    {

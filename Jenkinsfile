@@ -42,7 +42,7 @@ server.upload(uploadSpec)
 }
  stage ('deloy to tomcat'){
 
-    sh 'cp **/*.war /opt/tomcat/latest/webapps/'
+    sh 'sudo cp **/*.war /opt/tomcat/latest/webapps/'
 
 }
  

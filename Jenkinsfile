@@ -41,10 +41,10 @@ def uploadSpec="""{
 server.upload(uploadSpec)
 }
  stage ('deloy to tomcat'){
- sshagent(['tomcat-dev']) {
-    sh 'scp **/*.war minduseradmin@my43785dns.EastUS2.cloudapp.azure.com:/opt/tomcat/latest/webapps'
+
+    sh 'cp **/*.war /opt/tomcat/latest/webapps'
 
 }
- }
+ 
 
 }

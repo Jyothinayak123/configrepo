@@ -42,7 +42,7 @@ server.upload(uploadSpec)
 }
  stage ('deloy to tomcat'){
  sshagent(['tomcat-dev']) {
-    sh 'scp -o StrictHostKeyChecking=no **/*.war minduseradmin@10.0.0.4:/opt/tomcat/webapps'
+    sh 'cp **/*.war minduseradmin@10.0.0.4:/opt/tomcat/webapps'
 }
  }
 

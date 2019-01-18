@@ -42,7 +42,8 @@ server.upload(uploadSpec)
 }
  stage ('deloy to tomcat'){
  sshagent(['tomcat-dev']) {
-    sh 'cp **/*.war minduseradmin@10.0.0.4:/opt/tomcat/webapps'
+    sh 'scp **/*.war minduseradmin@my43785dns.EastUS2.cloudapp.azure.com:/opt/tomcat/latest/webapps'
+
 }
  }
 

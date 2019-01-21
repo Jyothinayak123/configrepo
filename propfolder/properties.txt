@@ -1,4 +1,10 @@
+UTIL_REPO_URL= git clone https://github.com/Jyothinayak123/utilrepo.git
+JAVA_CI_CD_GROOVY_URL=util_repo/java/java-ci-cd.groovy
+COMMON_GROOVY_URL=util_repo/common/common.groovy
+POM_FILE=pom.xml
+
 APP_GIT_URL=https://github.com/Jyothinayak123/apprepo.git
 APP_BUILD=mvn clean install
 APP_SONAR1=mvn sonar:sonar -Dsonar.host.url=
 APP_SONAR2=http://18.191.184.42:9000
+RECEIPIENT_MAIL_ID =jyothinayak.123@gmail.com

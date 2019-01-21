@@ -40,11 +40,22 @@ def uploadSpec="""{
 }"""
 server.upload(uploadSpec)
 }
- stage ('deloy to tomcat'){
+// stage ('deloy to tomcat'){
 
-    sh ' cp **/*.war /opt/tomcat/latest/webapps/'
+   // sh ' cp **/*.war /opt/tomcat/latest/webapps/'
 
+//}
+  stage('docker')
+    {
+        sh 'docker --version'
+        sh 'docker run -dit --name tomc -p 8084:8080 tomcat  '
+        sh 'docker cp /home/minduseradmin/tomcat-users.xml tomc:/usr/local/tomcat/conf/tomcat-users.xml '
+        sh 'docker cp /home/minduseradmin/context.xml tomc:/usr/local/tomcat/webapps/manager/META-INF/context.xml '
+        sh 'docker restart tomc'
+        sh 'docker cp **/*.war tomc:/usr/local/tomcat/webapps/'
+
+        
+    
 }
  
-
 }

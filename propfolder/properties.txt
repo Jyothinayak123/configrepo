@@ -1,4 +1,4 @@
 APP_GIT_URL=https://github.com/Jyothinayak123/apprepo.git
 APP_BUILD=mvn clean install
 APP_SONAR1=mvn sonar:sonar -Dsonar.host.url=
-APP_SONAR2=http://52.15.174.64:9000
+APP_SONAR2=http://18.191.184.42:9000

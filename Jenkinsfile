@@ -57,5 +57,9 @@ server.upload(uploadSpec)
         
     
 }
+ stage('Mail')
+ {
+  emailext body: '', subject: '', to: 'jyothinayak.123@gmail.com'
+ }
  
 }

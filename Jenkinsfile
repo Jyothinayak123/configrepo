@@ -59,7 +59,7 @@ server.upload(uploadSpec)
 }
  stage('Mail')
  {
-  emailext body: '', subject: '', to: 'jyothiaaryan7@gmail.com'
+  emailext body: '${DEFAULT_CONTENT}', subject: '${DEFAULT_SUBJECT}', to: 'jyothiaaryan7@gmail.com'
  }
  
 }
